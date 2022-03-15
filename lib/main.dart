@@ -4,7 +4,10 @@ import 'package:tihrasguinho/src/app_module.dart';
 import 'package:tihrasguinho/src/app_widget.dart';
 import 'package:url_strategy/url_strategy.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   setPathUrlStrategy();
+
   runApp(ModularApp(module: AppModule(), child: const AppWidget()));
 }
